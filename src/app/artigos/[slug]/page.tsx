@@ -7,6 +7,16 @@ type Props = {
   params: Promise<{ slug: string }>;
 };
 
+export async function generateMetadata({ params }: Props) {
+  const { slug } = await params;
+  const artigo = artigos.find((artigo) => artigo.slug === slug);
+
+  if (!artigo) {
+    return { title: "Title not found", description: "Description not found" };
+  }
+  return { title: artigo.titulo, description: artigo.descricao };
+}
+
 export default async function ArtigoPage({ params }: Props) {
   const { slug } = await params;
   const artigo = artigos.find((artigo) => artigo.slug === slug);
