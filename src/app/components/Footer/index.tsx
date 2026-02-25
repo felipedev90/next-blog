@@ -14,7 +14,7 @@ export default function Footer() {
             target="blank"
             aria-label="Github de Felipe Augusto"
             rel="noopener noreferrer"
-            className="hover:opacity-80 hover:scale-110 text-red-700 transition"
+            className="hover:opacity-80 hover:scale-110 text-emerald-600 transition"
           >
             <FaGithub />
           </a>
@@ -23,7 +23,7 @@ export default function Footer() {
             target="blank"
             aria-label="LinkedIn de Felipe Augusto"
             rel="noopener noreferrer"
-            className="hover:opacity-80 hover:scale-110 text-red-700 transition"
+            className="hover:opacity-80 hover:scale-110 text-emerald-600 transition"
           >
             <FaLinkedin />
           </a>

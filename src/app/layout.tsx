@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import "../styles/globals.css";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
-import Hero from "./components/Hero";
 import { Bruno_Ace_SC, Alumni_Sans_Pinstripe } from "next/font/google";
 
 const brunoAce = Bruno_Ace_SC({
@@ -33,7 +32,6 @@ export default function RootLayout({
         className={`${brunoAce.variable} ${aluminiSans.variable} min-h-screen flex flex-col text-white`}
       >
         <Header />
-        <Hero />
         <main className="flex-1">{children}</main>
         <Footer />
       </body>
