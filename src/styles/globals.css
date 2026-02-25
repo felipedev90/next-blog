@@ -1,7 +1,15 @@
 @import "tailwindcss";
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+@theme {
+  --font-title: "Bruno Ace SC", sans-serif;
+  --font-text: "Alumni Sans Pinstripe", sans-serif;
+}
+
+@layer base {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: black;
+  }
 }

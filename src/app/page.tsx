@@ -5,15 +5,20 @@ import Link from "next/link";
 export default function Home() {
   return (
     <div>
+      <h1>Nosso últimos artigos</h1>
+
       {artigos.map((artigo) => (
-        <Link href={`/artigos/${artigo.slug}`} key={artigo.slug}>
+        <div key={artigo.slug}>
           <div>
             <h2>{artigo.titulo}</h2>
             <span>{artigo.autor}</span>
             <data>{formatarDataPtBr(artigo.dataPublicacao)}</data>
             <p>{artigo.descricao}</p>
           </div>
-        </Link>
+          <div>
+            <Link href={`/artigos/${artigo.slug}`}>Ler mais</Link>
+          </div>
+        </div>
       ))}
     </div>
   );
