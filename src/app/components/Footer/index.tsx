@@ -11,7 +11,7 @@ export default function Footer() {
         <div className="flex flex-row gap-2 text-2xl lg:text-3xl">
           <a
             href="https://www.github.com/felipedev90"
-            target="blank"
+            target="_blank"
             aria-label="Github de Felipe Augusto"
             rel="noopener noreferrer"
             className="hover:opacity-80 hover:scale-110 text-emerald-600 transition"
@@ -20,7 +20,7 @@ export default function Footer() {
           </a>
           <a
             href="https://www.linkedin.com/felipesilva90"
-            target="blank"
+            target="_blank"
             aria-label="LinkedIn de Felipe Augusto"
             rel="noopener noreferrer"
             className="hover:opacity-80 hover:scale-110 text-emerald-600 transition"

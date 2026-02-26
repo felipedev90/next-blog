@@ -7,29 +7,30 @@ export default function Home() {
   return (
     <div>
       <section className="relative w-full h-[50vh] overflow-hidden md:h-screen">
-        <picture>
-          <source media="(max-width: 768px)" srcSet="/hero_img_1024p.webp" />
-          <img
-            src="/hero_img_1024p.webp"
-            alt="NextBlog_Hero_img"
-            className="w-full h-full object-cover block"
-          />
-        </picture>
+        <Image
+          src="/hero_img_1024p.webp"
+          alt="Imagem de fundo do blog NextBlog"
+          fill
+          className="object-cover"
+          priority
+        />
 
         <div className="absolute top-33 left-5 z-8  md:top-48 md:left-40">
           <div className="max-w-2xl flex gap-4">
-            <h1 className="font-title text-3xl font-bold leading-tight tracking-wider md:text-5xl">
+            <span className="font-title text-3xl font-bold leading-tight tracking-wider md:text-5xl">
               {">Hello,"}
-            </h1>
-            <h1 className="text-emerald-400 font-title text-3xl font-bold leading-tight tracking-wider md:text-5xl">
+            </span>
+            <span className="text-emerald-400 font-title text-3xl font-bold leading-tight tracking-wider md:text-5xl">
               world!_
-            </h1>
+            </span>
           </div>
         </div>
       </section>
 
       <section className="mx-auto max-w-5xl px-4 py-12">
-        <h1 className="mb-8 text-2xl font-bold md:text-3xl">Últimos artigos</h1>
+        <h1 className="mb-8 font-text text-3xl font-extrabold tracking-wider md:text-5xl">
+          Últimos artigos
+        </h1>
 
         <div className="flex flex-col gap-6">
           {artigos.map((artigo, index) => (
@@ -52,15 +53,15 @@ export default function Home() {
                     {artigo.titulo}
                   </h2>
 
-                  <div className="mb-1 flex items-center gap-2 text-xs text-gray-300">
-                    <span>{artigo.autor}</span>
-                    <span>·</span>
-                    <data>{formatarDataPtBr(artigo.dataPublicacao)}</data>
-                  </div>
-
                   <p className="text-sm leading-relaxed text-gray-400 line-clamp-3 md:line-clamp-4">
                     {artigo.descricao}
                   </p>
+                </div>
+
+                <div className="mb-1 flex items-center gap-2 text-xs text-gray-300">
+                  <span>Por: {artigo.autor}</span>
+                  <span>·</span>
+                  <data>{formatarDataPtBr(artigo.dataPublicacao)}</data>
                 </div>
 
                 <div className="mt-4 flex items-center justify-between">
@@ -72,7 +73,9 @@ export default function Home() {
                   </Link>
 
                   <div className="flex items-center gap-3 text-xs text-gray-400 md:gap-4 md:text-sm">
-                    <span className="flex items-center gap-1">♡</span>
+                    <a href="#" className="text-lg hover:text-red-700">
+                      ♡
+                    </a>
                     <span>Share</span>
                     <div className="flex gap-2">
                       <a href="#" className="hover:text-gray-600">
